@@ -1,0 +1,18 @@
+[package]
+name = "simple_bench"
+version = "0.1.0"
+authors = ["Jeong Woon Choi <choijeongwoon@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+sled = "0.34"
+criterion = "0.3.3"
+rand = "0.7.3"
+tempfile = "3.1"
+uuid = { version = "0.8", features = ["v4"] }
+
+[[bench]]
+name = "simple_get"
+harness = false
