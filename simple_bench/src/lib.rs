@@ -90,7 +90,11 @@ pub fn benchmark_get(env: &BenchmarkEnvironment) {
 }
 
 // Benchmark scaning all the data (key, value)
-pub fn benchmark_scan() {}
+pub fn benchmark_scan(env: &BenchmarkEnvironment) {
+    for iter in env.db.iter() {
+        assert!(!iter.is_err(), "sled Range Error");
+    }
+}
 
 // Benchmark insterting all the data (key, value)
 pub fn benchmark_insert() {}
